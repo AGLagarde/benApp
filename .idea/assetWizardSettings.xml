@@ -40,13 +40,25 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                      <entry key="text">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                     </map>
                                   </option>
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="D:\Cours\HETIC\Projet\Documents\iconPNG\iconPNG\notes_checklist_flip.png" />
-                                      <entry key="outputName" value="ic_task" />
+                                      <entry key="imageAsset" value="D:\Cours\HETIC\Projet\Documents\homePage.png" />
+                                      <entry key="outputName" value="homePageView" />
+                                      <entry key="theme" value="HOLO_DARK" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>
@@ -97,7 +109,7 @@
                                     <map>
                                       <entry key="backgroundImage" value="D:\Cours\HETIC\Projet\Documents\iconPNG\iconPNG\notes_checklist_flip.png" />
                                       <entry key="backgroundLayerName" value="ic_launcher_background" />
-                                      <entry key="foregroundImage" value="D:\Cours\HETIC\Projet\Documents\iconPNG\iconPNG\notes_checklist_flip.png" />
+                                      <entry key="foregroundImage" value="D:\Cours\HETIC\Projet\Documents\homePage.png" />
                                       <entry key="foregroundLayerName" value="ic_launcher_foreground" />
                                       <entry key="outputName" value="ic_home_v2" />
                                     </map>
@@ -121,6 +133,23 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                      <entry key="image">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="color" value="000000" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="D:\Cours\HETIC\Projet\Documents\homePage.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -189,11 +218,12 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="height" value="20" />
-                            <entry key="outputName" value="ic_house" />
+                            <entry key="autoMirrored" value="true" />
+                            <entry key="height" value="22" />
+                            <entry key="outputName" value="ic_single_neutral_actions" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="D:\Cours\HETIC\Projet\Documents\iconSVG\icon_navigation_bar\house.svg" />
-                            <entry key="width" value="22" />
+                            <entry key="sourceFile" value="D:\Cours\HETIC\Projet\Documents\iconSVG\icon_navigation_bar\single-neutral-actions.svg" />
+                            <entry key="width" value="20" />
                           </map>
                         </option>
                       </PersistentState>

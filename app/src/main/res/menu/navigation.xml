@@ -3,33 +3,35 @@
 
   <item
     android:id="@+id/navigation_home"
-    android:icon="@drawable/house"
+    android:icon="@drawable/ic_house"
     android:title="@string/title_home"
-    android:font="@font/robotoblackitalic" android:enabled="true" app:showAsAction="ifRoom"/>
+    android:fontFamily="@font/robotoblackitalic" android:enabled="true" app:showAsAction="ifRoom"/>
 
   <item
     android:id="@+id/navigation_task"
     android:icon="@drawable/ic_notes_checklist_flip_v2"
     android:title="@string/title_tache"
-    android:font="@font/robotoregular" android:enabled="true" app:showAsAction="ifRoom"/>
+    android:fontFamily="@font/robotoregular" android:enabled="true" app:showAsAction="ifRoom"/>
 
   <item
     android:id="@+id/navigation_calendar"
-    android:icon="@drawable/calendar"
+    android:icon="@drawable/ic_calendar"
     android:title="@string/title_calendar"
-    android:font="@font/robotoregular" app:showAsAction="ifRoom" android:enabled="true"/>
+    android:fontFamily="@font/robotoregular" app:showAsAction="ifRoom" android:enabled="true"/>
 
   <item
     android:id="@+id/navigation_notification"
-    android:icon="@drawable/alarm_bell"
+    android:icon="@drawable/ic_alarm_bell"
     android:title="@string/title_notification"
-    android:font="@font/robotoregular" android:enabled="true" app:showAsAction="ifRoom"/>
+    android:fontFamily="@font/robotoregular" android:enabled="true" app:showAsAction="ifRoom"/>
 
 
   <item
     android:id="@+id/navigation_profil"
-    android:icon="@drawable/single_neutral_actions"
+    android:icon="@drawable/ic_single_neutral_actions"
     android:title="@string/title_profil"
-    android:font="@font/robotoregular" android:enabled="true" app:showAsAction="ifRoom"/>
+    android:fontFamily="@font/robotoregular"
+    android:enabled="true"
+    app:showAsAction="ifRoom"/>
 
 </menu>
