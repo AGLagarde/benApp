@@ -6,64 +6,99 @@
   android:layout_height="match_parent"
   tools:context=".CreateAccount.CreateAccountActivity">
 
-
-  <Button
-    android:id="@+id/create_btn"
+  <ImageView
+    android:id="@+id/create_arrow_back"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="265dp"
-    android:text="Valider"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/create_editText_password" />
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/keyboard_backspace" />
 
-  <EditText
-    android:id="@+id/create_editText_firstname"
+  <TextView
+    android:id="@+id/tv_profil"
     android:layout_width="wrap_content"
-    android:layout_height="0dp"
-    android:layout_marginTop="160dp"
-    android:layout_marginBottom="16dp"
-    android:ems="10"
-    android:hint="Prénom"
-    app:layout_constraintBottom_toTopOf="@+id/create_editText_lastname"
-    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="64dp"
+    android:layout_marginTop="56dp"
+    android:fontFamily="sans-serif-black"
+    android:text="Profil"
+    android:textColor="@android:color/background_dark"
+    android:textSize="32dp"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
-  <EditText
-    android:id="@+id/create_editText_lastname"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginEnd="1dp"
-    android:layout_marginBottom="16dp"
-    android:ems="10"
-    android:hint="Nom"
-    app:layout_constraintBottom_toTopOf="@+id/create_editText_email"
-    app:layout_constraintEnd_toEndOf="@+id/create_editText_firstname"
-    app:layout_constraintTop_toBottomOf="@+id/create_editText_firstname" />
 
-  <EditText
-    android:id="@+id/create_editText_email"
-    android:layout_width="wrap_content"
+  <FrameLayout
+    android:id="@+id/frameLayout_id"
+    android:layout_width="279dp"
     android:layout_height="wrap_content"
-    android:layout_marginStart="1dp"
-    android:layout_marginBottom="16dp"
-    android:ems="10"
-    android:hint="Email"
-    app:layout_constraintBottom_toTopOf="@+id/create_editText_password"
-    app:layout_constraintStart_toStartOf="@+id/create_editText_lastname"
-    app:layout_constraintTop_toBottomOf="@+id/create_editText_lastname" />
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-  <EditText
-    android:id="@+id/create_editText_password"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="30dp"
-    android:ems="10"
-    android:hint="Mot de passe"
-    app:layout_constraintBottom_toTopOf="@+id/create_btn"
-    app:layout_constraintStart_toStartOf="@+id/create_editText_email"
-    app:layout_constraintTop_toBottomOf="@+id/create_editText_email" />
+
+    <EditText
+      android:id="@+id/create_editText_firstname"
+      android:layout_width="match_parent"
+      android:layout_height="45dp"
+      android:ems="10"
+      android:hint="Prénom"
+      android:inputType="textShortMessage"
+      android:singleLine="true" />
+
+    <EditText
+      android:id="@+id/create_editText_lastname"
+      android:layout_width="match_parent"
+      android:layout_height="45dp"
+      android:layout_marginTop="60dp"
+      android:ems="10"
+      android:hint="Nom"
+      android:inputType="textShortMessage"
+      android:singleLine="true"
+      app:layout_constraintTop_toBottomOf="@+id/create_editText_firstname" />
+
+    <EditText
+      android:id="@+id/create_editText_email"
+      android:layout_width="match_parent"
+      android:layout_height="45dp"
+      android:layout_marginTop="120dp"
+      android:ems="10"
+      android:hint="Email"
+      android:inputType="textEmailAddress"
+      android:singleLine="true"
+      app:layout_constraintTop_toBottomOf="@+id/create_editText_lastname" />
+
+    <EditText
+      android:id="@+id/create_editText_password"
+      android:layout_width="match_parent"
+      android:layout_height="45dp"
+      android:layout_marginTop="180dp"
+      android:ems="10"
+      android:hint="Mot de passe"
+      android:inputType="textPassword"
+      android:singleLine="true"
+      app:layout_constraintTop_toBottomOf="@+id/create_editText_email" />
+
+    <Button
+      android:id="@+id/create_btn"
+      android:layout_width="match_parent"
+      android:layout_height="45dp"
+      android:layout_marginTop="240dp"
+      android:backgroundTint="#ff1f4e"
+      android:text="Valider"
+      android:textColor="@android:color/background_light"
+      app:layout_constraintTop_toBottomOf="@+id/create_editText_password" />
+
+
+  </FrameLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>

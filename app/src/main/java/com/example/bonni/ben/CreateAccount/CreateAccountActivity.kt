@@ -1,10 +1,12 @@
 package com.example.bonni.ben.CreateAccount
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import com.beust.klaxon.Parser
 import com.example.bonni.ben.R
@@ -26,7 +28,7 @@ class CreateAccountActivity : AppCompatActivity() {
         setContentView(R.layout.activity_create_account)
 
       var create_btn = findViewById<Button>(R.id.create_btn) as Button
-
+      var create_arrow_back = findViewById<ImageView>(R.id.create_arrow_back) as ImageView
 
       var firstname = create_editText_firstname.text
       var lastname= create_editText_lastname.text
@@ -46,7 +48,9 @@ class CreateAccountActivity : AppCompatActivity() {
       }
 
 
-
+      create_arrow_back.setOnClickListener {
+        finish()
+      }
 
 
 

@@ -1,10 +1,12 @@
 package com.example.bonni.ben.CreateAccount
 
+import android.media.session.MediaSession
 import android.util.Log
 import android.widget.Toast
 import com.beust.klaxon.Json
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.jsonBody
+import com.github.kittinunf.result.success
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.google.gson.annotations.SerializedName
@@ -30,7 +32,8 @@ class BenAPI {
         when (result) {
         is com.github.kittinunf.result.Result.Success -> {
           Log.d("okay", "success")
-
+          val resultat = result.value
+          Log.d("result", resultat)
         }
         is com.github.kittinunf.result.Result.Failure -> {
           Log.d("okay", "failure")
