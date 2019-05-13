@@ -6,13 +6,35 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent">
 
+  <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/task_frameLayout_id">
+
+    <TextView
+      android:text="Liste des missions"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:id="@+id/task_tv_name_mission"/>
+
+    <android.support.design.widget.FloatingActionButton
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:clickable="true" app:srcCompat="@android:drawable/ic_input_add"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginEnd="0dp"
+      android:layout_marginStart="350dp"
+      android:id="@+id/task_floating_btn_add_mission"
+      android:layout_marginRight="0dp"/>
 
 
-  <ImageView
+
+  </FrameLayout>
+  <android.support.v7.widget.RecyclerView
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:srcCompat="@drawable/task_page"
-    android:id="@+id/imageViewTask"/>
-
+    android:layout_height="612dp" android:layout_alignParentStart="true" android:layout_marginStart="0dp"
+    android:layout_alignParentBottom="true" android:layout_marginBottom="0dp"
+    app:layout_constraintTop_toBottomOf="@+id/task_frameLayout_id" android:layout_marginTop="49dp"
+    android:layout_below="@+id/task_frameLayout_id" android:id="@+id/task_rv_mission"/>
 
 </RelativeLayout>

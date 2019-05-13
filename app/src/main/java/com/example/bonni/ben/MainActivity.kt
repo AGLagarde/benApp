@@ -1,12 +1,11 @@
 package com.example.bonni.ben
 
 import android.os.Bundle
-import android.os.Parcel
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v4.app.Fragment
-import com.example.bonni.ben.DataClass.User
 import com.example.bonni.ben.NavigationBottomBar.Fragment.*
+import com.example.bonni.ben.NavigationBottomBar.Fragment.Task.TaskFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
 
     openFragment(homeFragment)
+
+    val token=intent.getStringExtra("token")
 
     //toolbar = supportActionBar!!
     val bottomNavigation: BottomNavigationView = findViewById(R.id.navigationView)
