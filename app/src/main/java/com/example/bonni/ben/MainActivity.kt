@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
     //toolbar = supportActionBar!!
     val bottomNavigation: BottomNavigationView = findViewById(R.id.navigationView)
 
+    
+
     bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
   }
 
