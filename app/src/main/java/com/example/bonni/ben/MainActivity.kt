@@ -1,14 +1,16 @@
 package com.example.bonni.ben
 
+import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v4.app.Fragment
+import android.widget.Toast
 import com.example.bonni.ben.NavigationBottomBar.Fragment.*
 import com.example.bonni.ben.NavigationBottomBar.Fragment.Task.TaskFragment
 
 
-class MainActivity : AppCompatActivity() {
+open class MainActivity : AppCompatActivity() {
 
   val homeFragment = HomeFragment.newInstance()
 
@@ -20,12 +22,18 @@ class MainActivity : AppCompatActivity() {
 
     openFragment(homeFragment)
 
-    val token=intent.getStringExtra("token")
+    val token_string=intent.getStringExtra("token")
+
+    val sharedPreferences = this.getSharedPreferences("users_token", MODE_PRIVATE);
+    sharedPreferences.edit()
+      .putString("token", token_string)
+      .apply()
+
 
     //toolbar = supportActionBar!!
     val bottomNavigation: BottomNavigationView = findViewById(R.id.navigationView)
 
-    
+
 
     bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
   }
@@ -69,6 +77,7 @@ class MainActivity : AppCompatActivity() {
     transaction.addToBackStack(null)
     transaction.commit()
   }
+
 
 
 }

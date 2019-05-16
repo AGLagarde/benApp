@@ -23,10 +23,14 @@ class BenAPI {
   companion object {
 
     var base_url: String = "http://ulysse.idequanet.com/ben/web"
+
     var api_user_create: String = "/api/user/create"
     var api_user_login: String = "/api/user/login"
     var api_house_create_name: String = "/api/house/create"
     var api_house_create_invite: String = "/api/house/send-invitation"
+    var api_users_data: String = "/api/users"
+    var api_task_lists: String = "/api/task-lists"
+    var api_create_task_lists:String = "/api/task-list/create"
 
 
 

@@ -113,19 +113,6 @@
       android:singleLine="true"
       app:layout_constraintTop_toBottomOf="@+id/create_editText_email"/>
 
-    <!--<EditText-->
-      <!--android:id="@+id/create_editText_confirm_password"-->
-      <!--android:layout_width="match_parent"-->
-      <!--android:layout_height="@dimen/size_edit_text_height"-->
-      <!--android:layout_marginTop="240dp"-->
-      <!--android:background="@drawable/edit_text_bg"-->
-      <!--android:hint="Confirmez le mot de passe"-->
-      <!--android:inputType="textPassword"-->
-      <!--android:paddingLeft="20dp"-->
-      <!--android:singleLine="true"-->
-      <!--app:layout_constraintTop_toBottomOf="@+id/create_editText_email"/>-->
-
-
     <Button
       android:id="@+id/create_btn"
       android:layout_width="match_parent"
