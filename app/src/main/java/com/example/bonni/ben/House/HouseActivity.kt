@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.bonni.ben.R
 import android.content.Intent
+import com.example.bonni.ben.House.CreateHouse.HouseCreateNameActivity
+import com.example.bonni.ben.House.JoinHouse.HouseJoinActivity
+import kotlinx.android.synthetic.main.activity_house_join.*
 
 public open class HouseActivity : AppCompatActivity() {
 
@@ -21,11 +24,21 @@ public open class HouseActivity : AppCompatActivity() {
 
 
 
+
+
+
     house_create.setOnClickListener {
       val intent_house_create_name = Intent (applicationContext, HouseCreateNameActivity::class.java)
       intent_house_create_name.putExtra("token", token)
       startActivity(intent_house_create_name)
     }
+
+    house_join.setOnClickListener {
+      val intent_house_join = Intent (applicationContext, HouseJoinActivity::class.java)
+      intent_house_join.putExtra("token", token)
+      startActivity(intent_house_join)
+    }
+
 
 
 

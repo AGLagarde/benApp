@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
-   xmlns:app="http://schemas.android.com/apk/res-auto"
-   xmlns:tools="http://schemas.android.com/tools"
-   android:layout_width="match_parent"
-   android:layout_height="wrap_content"
-   android:id="@+id/task_name_mission">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:id="@+id/task_tv_name_tasks">
 
   <LinearLayout android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -22,7 +22,7 @@
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/task_tv_mission" android:layout_marginStart="50dp"
+        android:id="@+id/task_tv_task" android:layout_marginStart="50dp"
         android:textSize="18sp" android:textColor="#000000" android:textStyle="bold"/>
 
     </FrameLayout>
@@ -31,8 +31,8 @@
                  android:layout_gravity="center_vertical|right" android:layout_marginStart="150dp">
       <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" app:srcCompat="@drawable/arrow_task"
-        android:id="@+id/task_arrow_go_detail"
+        android:layout_height="wrap_content" app:srcCompat="@drawable/point_task"
+        android:id="@+id/point_task"
       />
     </FrameLayout>
 

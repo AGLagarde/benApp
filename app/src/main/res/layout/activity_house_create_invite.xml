@@ -5,23 +5,44 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".House.HouseCreateInviteActivity">
+  tools:context=".House.CreateHouse.HouseCreateInviteActivity">
 
-  <EditText
+  <TextView
+    android:text="SE CONNECTER"
+    android:textColor="#F91F4C"
+    android:textSize="18dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:inputType="textPersonName"
+    android:id="@+id/create_invite_tv_go"
+    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp" android:layout_marginTop="16dp"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <EditText
+
+    android:inputType="textEmailAddress"
     android:ems="10"
+    android:layout_width="280dp"
+    android:paddingLeft="10dp"
+    android:layout_height="@dimen/size_edit_text_height"
+    android:background="@drawable/edit_text_bg"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent" android:id="@+id/house_create_invite_editText"
     android:layout_marginTop="8dp"
     app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-    app:layout_constraintBottom_toBottomOf="parent" android:hint="Email de votre coloc" android:singleLine="true"/>
+    app:layout_constraintBottom_toBottomOf="parent" android:hint="Email de ton coloc" android:singleLine="true"
+    app:layout_constraintVertical_bias="0.38" app:layout_constraintHorizontal_bias="0.496"/>
 
   <Button
     android:text="Inviter"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" android:id="@+id/house_create_invite_btn"
-    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/house_create_invite_editText"/>
+    android:background="@drawable/edit_text_bg"
+    android:backgroundTint="#F91F4C"
+    android:textColor="@android:color/background_light"
+    android:textSize="@dimen/size_button_font"
+    app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/house_create_invite_btn"
+    android:layout_marginTop="28dp" app:layout_constraintTop_toBottomOf="@+id/house_create_invite_editText"
+    app:layout_constraintHorizontal_bias="0.498"/>
+
 </android.support.constraint.ConstraintLayout>

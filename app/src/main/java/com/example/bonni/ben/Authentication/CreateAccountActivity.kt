@@ -6,18 +6,13 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.Toast
 import com.example.bonni.ben.House.HouseActivity
-import com.example.bonni.ben.House.HouseCreateNameActivity
-import com.example.bonni.ben.MainActivity
 import com.example.bonni.ben.R
 import com.github.kittinunf.fuel.Fuel
-import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import kotlinx.android.synthetic.main.activity_create_account.*
 import java.nio.charset.Charset
-import java.util.Collections.replaceAll
 
 
 public open class CreateAccountActivity : AppCompatActivity() {

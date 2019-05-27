@@ -4,21 +4,59 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:background="@android:color/white"
-  android:clickable="true" >
+  android:layout_height="match_parent">
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="93dp" android:orientation="horizontal">
 
+      <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/pattern"
+        android:alpha="1">
 
-  <TextView
-    android:id="@+id/home_tv_firstname"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentEnd="true"
-    android:layout_marginStart="27dp"
-    android:layout_marginTop="36dp"
-    android:layout_marginEnd="325dp"
-    android:text="TextView" />
+        <TextView
+          android:text="Salut Marc!"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/textView"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="5dp"
+          android:textStyle="bold"
+          android:textSize="26dp"
+          android:layout_marginRight="5dp" android:paddingTop="20dp" android:paddingLeft="30dp"/>
+        <TextView
+          android:text="Jeu. 07 décembre"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="16dp"
+          android:id="@+id/textView2" android:layout_marginLeft="5dp"
+          android:layout_marginRight="5dp" android:paddingLeft="30dp"/>
+      </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/colorWhite"
+      android:padding="20dp">
+      <TextView
+        android:text="Tu as 1 mission cette semaine. \n Bon courage!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/textView5" android:layout_weight="5"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:background="@drawable/radius_text"/>
+      <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" app:srcCompat="@drawable/ben_home" android:id="@+id/imageView"
+        android:layout_weight="1"/>
+    </LinearLayout>
+  </LinearLayout>
 </RelativeLayout>
-

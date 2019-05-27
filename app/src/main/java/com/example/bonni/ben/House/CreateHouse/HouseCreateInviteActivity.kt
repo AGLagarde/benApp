@@ -1,19 +1,16 @@
-package com.example.bonni.ben.House
+package com.example.bonni.ben.House.CreateHouse
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import com.example.bonni.ben.Authentication.BenAPI
-import com.example.bonni.ben.MainActivity
-import com.example.bonni.ben.NavigationBottomBar.Fragment.HomeFragment
+import com.example.bonni.ben.Authentication.LoginActivity
 import com.example.bonni.ben.R
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.authentication
-import kotlinx.android.synthetic.main.activity_create_account.*
 import kotlinx.android.synthetic.main.activity_house_create_invite.*
 import java.nio.charset.Charset
 
@@ -46,9 +43,7 @@ class HouseCreateInviteActivity : AppCompatActivity() {
               val success = response.statusCode
               callback(success)
 
-              val intent_home_page = Intent(applicationContext, MainActivity::class.java)
-              intent_home_page.putExtra("token", token)
-              startActivity(intent_home_page)
+              Toast.makeText(this, "Coloc invité", Toast.LENGTH_LONG).show()
 
             }
             is com.github.kittinunf.result.Result.Failure -> {
@@ -71,6 +66,11 @@ class HouseCreateInviteActivity : AppCompatActivity() {
       })
 
 
+    }
+
+    create_invite_tv_go.setOnClickListener {
+      val intent_home_page = Intent(applicationContext, LoginActivity::class.java)
+      startActivity(intent_home_page)
     }
 
 

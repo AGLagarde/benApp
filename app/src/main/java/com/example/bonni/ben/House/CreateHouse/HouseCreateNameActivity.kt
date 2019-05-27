@@ -1,18 +1,14 @@
-package com.example.bonni.ben.House
+package com.example.bonni.ben.House.CreateHouse
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import com.example.bonni.ben.Authentication.BenAPI
-import com.example.bonni.ben.Authentication.CreateAccountActivity
+import com.example.bonni.ben.House.HouseActivity
 import com.example.bonni.ben.R
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.authentication
-import kotlinx.android.synthetic.main.activity_create_account.*
 import kotlinx.android.synthetic.main.activity_house_create_name.*
 import java.nio.charset.Charset
 

@@ -1,11 +1,9 @@
 package com.example.bonni.ben
 
-import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v4.app.Fragment
-import android.widget.Toast
 import com.example.bonni.ben.NavigationBottomBar.Fragment.*
 import com.example.bonni.ben.NavigationBottomBar.Fragment.Task.TaskFragment
 
@@ -50,11 +48,6 @@ open class MainActivity : AppCompatActivity() {
       R.id.navigation_task -> {
         val taskFragment = TaskFragment.newInstance()
         openFragment(taskFragment)
-        return@OnNavigationItemSelectedListener true
-      }
-      R.id.navigation_like -> {
-        val likeFragment = LikeFragment.newInstance()
-        openFragment(likeFragment)
         return@OnNavigationItemSelectedListener true
       }
       R.id.navigation_notification -> {

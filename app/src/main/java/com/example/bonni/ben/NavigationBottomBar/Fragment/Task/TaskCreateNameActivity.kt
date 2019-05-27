@@ -1,57 +1,42 @@
 package com.example.bonni.ben.NavigationBottomBar.Fragment.Task
 
-
-import android.app.PendingIntent.getActivity
-import android.content.Context
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
 import android.util.Log
-import android.widget.Button
-import android.widget.Toast
 import com.example.bonni.ben.Authentication.BenAPI
-import com.example.bonni.ben.House.HouseActivity
-import com.example.bonni.ben.MainActivity
 import com.example.bonni.ben.R
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.core.extensions.authentication
+import kotlinx.android.synthetic.main.activity_task_create_name.*
 import kotlinx.android.synthetic.main.activity_task_list_create_name.*
 import java.nio.charset.Charset
 
-
-
-class TaskListCreateNameActivity : AppCompatActivity() {
-
-
+class TaskCreateNameActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.activity_task_list_create_name)
+    setContentView(R.layout.activity_task_create_name)
 
-
-
-    val sharedPreferences = this.getSharedPreferences("users_token", AppCompatActivity.MODE_PRIVATE)
+    val sharedPreferences = this.getSharedPreferences("users_token", MODE_PRIVATE)
     val myToken = sharedPreferences?.getString("token", "token")
 
+    val mission_id = this.getSharedPreferences("mission_id", MODE_PRIVATE)
 
-    var task_create_name_editText = task_create_name_editText.text
-    var task_create_name_btn = findViewById(R.id.task_create_name_btn) as Button
+    val my_mission_id = mission_id?.getString("mission_id", "mission_id")
 
-    fun create_task_list_name(task_list_name: String) {
+    var task_create_name_editText_task = task_create_name_editText_task.text
+
+    fun create_task_name(task_name: String) {
 
       if (myToken != null) {
-        Fuel.post("${BenAPI.base_url}" + "${BenAPI.api_create_task_lists}")
+        Fuel.post("${BenAPI.base_url}" + "${BenAPI.api_create_task}" + "$my_mission_id")
           .header("Content-Type" to "application/json")
           .authentication()
           .bearer(myToken)
-          .body(task_list_name, Charset.defaultCharset())
+          .body(task_name, Charset.defaultCharset())
           .responseString { request, response, result ->
             when (result) {
               is com.github.kittinunf.result.Result.Success -> {
-
                 this.runOnUiThread {
                   this.finish()
                 }
@@ -67,14 +52,14 @@ class TaskListCreateNameActivity : AppCompatActivity() {
 
     }
 
-
-
-
-    task_create_name_btn.setOnClickListener {
-      create_task_list_name("{ \"taskList\":{ \"name\": \"$task_create_name_editText\"} }")
+    task_create_name_btn_task.setOnClickListener {
+      create_task_name("{ \"task\":{ \"name\": \"$task_create_name_editText_task\"} }")
 
     }
 
+    create_task_arrow_back.setOnClickListener {
+      super.onBackPressed()
+    }
 
 
 

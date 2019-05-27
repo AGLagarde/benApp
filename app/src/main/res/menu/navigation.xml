@@ -13,11 +13,6 @@
     android:title="@string/title_tache"
     android:fontFamily="@font/robotoregular" android:enabled="true" app:showAsAction="ifRoom"/>
 
-  <item
-    android:id="@+id/navigation_like"
-    android:icon="@drawable/ic_calendar"
-    android:title="@string/title_calendar"
-    android:fontFamily="@font/robotoregular" app:showAsAction="ifRoom" android:enabled="true"/>
 
   <item
     android:id="@+id/navigation_notification"
