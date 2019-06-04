@@ -102,6 +102,8 @@ class HomeFragment : Fragment() {
               val packagesArray = gson.fromJson(task_string , Array<Task>::class.java).toList()
               activity?.runOnUiThread(Runnable {
 
+                list_task.clear()
+                
                 packagesArray?.forEach { myTask : Task ->
                   list_task.add(myTask)
 
