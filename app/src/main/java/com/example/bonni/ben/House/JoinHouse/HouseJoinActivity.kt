@@ -26,7 +26,7 @@ class HouseJoinActivity : AppCompatActivity() {
 
     fun houseJoin(houseJoinCode: String) {
 
-      Fuel.post("${BenAPI.base_url}" + "${BenAPI.api_house_check_code}")
+      Fuel.post("${BenAPI.base_url}" + "${BenAPI.api_house_join}")
         .header("Content-Type" to "application/json")
         .body(houseJoinCode, Charset.defaultCharset())
         .authentication()
@@ -35,10 +35,14 @@ class HouseJoinActivity : AppCompatActivity() {
           when (result) {
             is com.github.kittinunf.result.Result.Success -> {
 
-              Toast.makeText(this, "Tu as bien rejoint la coloc ! Connecte toi pour commencer ton aventure ;)", Toast.LENGTH_LONG).show()
+              this.runOnUiThread {
+                Toast.makeText(this, "Tu as bien rejoint la coloc ! Connecte toi pour commencer l'aventure ;)", Toast.LENGTH_LONG).show()
+                val intent_login = Intent(applicationContext, LoginActivity::class.java)
+                startActivity(intent_login)
+              }
 
-              val intent_login = Intent(applicationContext, LoginActivity::class.java)
-              startActivity(intent_login)
+
+
 
             }
             is com.github.kittinunf.result.Result.Failure -> {

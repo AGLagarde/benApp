@@ -30,7 +30,7 @@ class HouseCreateInviteActivity : AppCompatActivity() {
 
 
     // ***** HouseCreateInvite : email *****
-    fun houseCreateInvite(houseCreateInvite: String, callback: ((response : Int) -> Unit)) {
+    fun houseCreateInvite(houseCreateInvite: String) {
 
       Fuel.post("${BenAPI.base_url}" + "${BenAPI.api_house_create_invite}")
         .header("Content-Type" to "application/json")
@@ -40,10 +40,11 @@ class HouseCreateInviteActivity : AppCompatActivity() {
         .responseString { request, response, result ->
           when (result) {
             is com.github.kittinunf.result.Result.Success -> {
-              val success = response.statusCode
-              callback(success)
 
-              Toast.makeText(this, "Coloc invité", Toast.LENGTH_LONG).show()
+              this.runOnUiThread {
+                Toast.makeText(this, "Coloc invité", Toast.LENGTH_LONG).show()
+              }
+
 
             }
             is com.github.kittinunf.result.Result.Failure -> {
@@ -61,10 +62,7 @@ class HouseCreateInviteActivity : AppCompatActivity() {
 
     house_create_invite_btn.setOnClickListener {
 
-      houseCreateInvite("{ \"email\": \"$house_create_invite_editText\"}", { success: Int ->
-        response = success
-      })
-
+      houseCreateInvite("{ \"email\": \"$house_create_invite_editText\"}")
 
     }
 

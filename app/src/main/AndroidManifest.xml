@@ -18,6 +18,8 @@
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     android:usesCleartextTraffic="true">
+    <activity android:name=".NavigationBottomBar.Fragment.Task.TaskModifyNameActivity">
+    </activity>
     <activity android:name=".House.JoinHouse.HouseJoinActivity">
     </activity>
     <activity android:name=".NavigationBottomBar.Fragment.Task.TaskCreateNameActivity">

@@ -21,6 +21,9 @@ open class MainActivity : AppCompatActivity() {
     openFragment(homeFragment)
 
     val token_string=intent.getStringExtra("token")
+    val user_name=intent.getStringExtra("user")
+
+
 
     val sharedPreferences = this.getSharedPreferences("users_token", MODE_PRIVATE);
     sharedPreferences.edit()

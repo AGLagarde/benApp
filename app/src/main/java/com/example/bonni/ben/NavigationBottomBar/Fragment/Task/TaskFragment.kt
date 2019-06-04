@@ -57,7 +57,6 @@ class TaskFragment : Fragment()  {
 
   val adapter = ItemMissionAdapter(task_lists, { item : TaskLists -> itemClicked(item)})
 
-  var mission_id = 0
 
 
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -112,11 +111,8 @@ class TaskFragment : Fragment()  {
 
                   task_rv_mission.layoutManager = LinearLayoutManager(activity)
 
-
                   task_rv_mission.adapter = adapter
 
-
-                  mission_id = myTasks.id
                 }
               })
             }

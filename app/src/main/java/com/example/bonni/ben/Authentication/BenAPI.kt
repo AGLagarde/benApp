@@ -29,11 +29,17 @@ class BenAPI {
     var api_house_create_name: String = "/api/house/create"
     var api_house_create_invite: String = "/api/house/send-invitation"
     var api_house_check_code : String = "/api/house/check-code"
+    var api_house_join : String = "/api/house/join"
     var api_users_data: String = "/api/users"
     var api_task_lists: String = "/api/task-lists"
     var api_create_task_lists:String = "/api/task-list/create"
     var api_create_task : String = "/api/task/add/" //+ id
     var api_tasks_of_taskList : String = "/api/task-list/" //+ id
+    var api_delete_task : String = "/api/task/delete/" //+id
+    var api_modify_task : String = "/api/task/edit/"//+id
+    var api_my_task_lists : String = "/api/my-task-lists"
+
+
 
 
 

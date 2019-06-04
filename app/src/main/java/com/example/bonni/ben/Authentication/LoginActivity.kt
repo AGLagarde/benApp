@@ -32,13 +32,12 @@ class LoginActivity : AppCompatActivity() {
 
     var userList = ArrayList<User>()
 
-    val user1 = User("de", "de", "e", "ed", 2, "d")
 
 
     // ***** Login : email, password *****
 
 
-    fun login(userLogin: String, callback: ((token: String, user: String, response : Int) -> Unit)) {
+    fun login(userLogin: String) {
       Fuel.post("${BenAPI.base_url}" + "${BenAPI.api_user_login}")
         .header("Content-Type" to "application/json")
         .body(userLogin, Charset.defaultCharset())
@@ -51,14 +50,21 @@ class LoginActivity : AppCompatActivity() {
               val jelement = JsonParser().parse(data)
               val jobject = jelement.asJsonObject
               val success = response.statusCode
-              val user_string = (jobject.get("data")as JsonObject).get("user").toString()
+              var user_string = ((jobject.get("data")as JsonObject).get("user")as JsonObject).get("firstname").toString()
               var token_string = (jobject.get("data")as JsonObject).get("token").toString()
               token_string = token_string.substring(1, token_string.length-1)
-              callback(token_string, user_string, success)
+              user_string = user_string.substring(1, user_string.length-1)
+
+              val sharedPreferences_name = this.getSharedPreferences("user_name", MODE_PRIVATE);
+              sharedPreferences_name.edit()
+                .putString("user_name", user_string)
+                .apply()
+
 
 
               val intent_home_page = Intent(applicationContext, MainActivity::class.java)
               intent_home_page.putExtra("token", token_string)
+              intent_home_page.putExtra("user", user_string)
               startActivity(intent_home_page)
 
               Log.d("okay", token_string)
@@ -79,14 +85,7 @@ class LoginActivity : AppCompatActivity() {
 
 
     login_btn_connexion.setOnClickListener {
-
-
-      login("{ \"user\":{ \"email\": \"$email\","+"\"password\": \"$password\"} }", { token: String, user: String, success: Int ->
-        user_token = token
-        user_string = user
-        response = success
-
-      })
+      login("{ \"user\":{ \"email\": \"$email\","+"\"password\": \"$password\"} }")
     }
 
 

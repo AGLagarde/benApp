@@ -25,8 +25,8 @@
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
     app:itemBackground="@color/colorWhite"
-    app:itemIconTint="@color/colorNavigation"
-    app:itemTextColor="@color/colorNavigation"
+    app:itemIconTint="#fd2053"
+    app:itemTextColor="#fd2053"
     app:menu="@menu/navigation"/>
 
 </android.support.constraint.ConstraintLayout>

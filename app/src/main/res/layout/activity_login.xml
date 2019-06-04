@@ -82,12 +82,12 @@
     android:layout_height="@dimen/size_button_height"
     android:layout_marginTop="8dp"
     android:background="@drawable/edit_text_bg"
-    android:backgroundTint="#9B9B9B"
+    android:backgroundTint="@android:color/black"
     android:text="Créer un compte"
     android:textColor="@android:color/background_light"
     android:textSize="@dimen/size_button_font"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.496"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/login_btn_connexion" />
+    app:layout_constraintTop_toBottomOf="@+id/login_btn_connexion"/>
 </android.support.constraint.ConstraintLayout>

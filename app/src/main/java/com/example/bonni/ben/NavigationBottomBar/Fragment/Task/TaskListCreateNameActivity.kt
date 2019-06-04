@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import com.example.bonni.ben.Authentication.BenAPI
 import com.example.bonni.ben.House.HouseActivity
@@ -39,6 +40,7 @@ class TaskListCreateNameActivity : AppCompatActivity() {
 
     var task_create_name_editText = task_create_name_editText.text
     var task_create_name_btn = findViewById(R.id.task_create_name_btn) as Button
+    var create_taskList_arrow_back = findViewById(R.id.create_taskList_arrow_back) as ImageView
 
     fun create_task_list_name(task_list_name: String) {
 
@@ -74,6 +76,12 @@ class TaskListCreateNameActivity : AppCompatActivity() {
       create_task_list_name("{ \"taskList\":{ \"name\": \"$task_create_name_editText\"} }")
 
     }
+
+    create_taskList_arrow_back.setOnClickListener {
+      super.onBackPressed()
+    }
+
+
 
 
 
